@@ -1,0 +1,61 @@
+VISITE TECHNIQUE AGRICOLE — GUIDE RAPIDE
+==========================================
+
+CONTENU DU DOSSIER
+- index.html       (Accueil)
+- services.html     (Services)
+- a-propos.html     (À propos)
+- galerie.html      (Galerie)
+- contact.html      (Contact + formulaire)
+- style.css         (feuille de style commune)
+- images/           (dossier vide, à remplir avec les vraies photos)
+
+1) ACTIVER LE FORMULAIRE DE CONTACT (Formspree, gratuit)
+---------------------------------------------------------
+a. Aller sur https://formspree.io et créer un compte gratuit.
+b. Créer un nouveau formulaire ("New Form"), lui donner un nom
+   (ex : "Contact Visite Technique Agricole").
+c. Formspree donne une adresse du type :
+       https://formspree.io/f/abcd1234
+d. Ouvrir contact.html, chercher la ligne :
+       action="https://formspree.io/f/VOTRE_ID_FORMSPREE"
+   et remplacer VOTRE_ID_FORMSPREE par l'ID reçu (ex : abcd1234).
+e. Formspree envoie automatiquement les messages du formulaire
+   à l'adresse email utilisée pour créer le compte.
+   (Le plan gratuit permet 50 messages/mois.)
+
+2) AJOUTER LES VRAIES PHOTOS
+-----------------------------
+a. Mettre les photos dans le dossier images/
+   (ex : images/portrait.jpg, images/photo1.jpg...)
+b. Dans a-propos.html, remplacer le bloc placeholder par :
+       <img src="images/portrait.jpg" alt="Description de la photo">
+c. Dans galerie.html, faire pareil pour chaque photo.
+
+3) COMPLÉTER LE NOM
+---------------------
+Dans a-propos.html, remplacer "[Nom à compléter]" par le nom
+de la personne qui fait les visites techniques.
+
+4) DÉPLOYER LE SITE (gratuit)
+-------------------------------
+Option simple : Netlify Drop
+a. Aller sur https://app.netlify.com/drop
+b. Glisser-déposer le dossier entier du site sur la page.
+c. Netlify donne un lien public en quelques secondes
+   (ex : https://nom-au-hasard.netlify.app).
+d. On peut ensuite créer un compte gratuit pour garder le site
+   et éventuellement brancher un nom de domaine.
+
+Option alternative : GitHub Pages
+a. Créer un dépôt GitHub, y mettre tous ces fichiers.
+b. Dans les paramètres du dépôt : Settings > Pages > activer
+   "Deploy from branch" sur la branche principale.
+c. Le site est accessible à une adresse du type
+   https://utilisateur.github.io/nom-du-depot/
+
+5) NOM DE DOMAINE (optionnel)
+-------------------------------
+Un nom de domaine (ex : visitetechniqueagricole.sn ou .com)
+peut être acheté séparément (environ 10-15 €/an) puis relié
+à Netlify ou GitHub Pages depuis leurs paramètres respectifs.
