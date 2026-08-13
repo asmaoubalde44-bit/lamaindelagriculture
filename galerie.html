@@ -1,207 +1,392 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galerie — La Main de l’Agriculture</title>
-<meta name="description" content="Photos des visites techniques, du maraîchage et des pépinières à Vélingara et environs.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Photo — La Main de l'Agriculture | Vélingara</title>
+  <meta name="description" content="Découvrez nos photos du terrain à Vélingara : champs de gombo, récoltes fraîches de piments, concombres, tomates, poivrons, aubergines et diakhatou.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try { localStorage.clear(); sessionStorage.clear(); } catch(e) {}
+  </script>
 </head>
-<body class="big">
+<body>
 
-<header class="floating-header">
-  <div class="header-pill">
-  <a class="brand" href="index.html">
-    <div class="brand-mark"><img src="images/logo.jpeg" alt="Logo La Main de l'Agriculture"></div>
-    <span class="brand-name">La Main de l’Agriculture</span>
-  </a>
-  <input type="checkbox" id="nav-toggle" class="nav-toggle">
-  <nav class="main-nav">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="galerie.html" aria-current="page">Galerie</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-  <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
-    <span></span><span></span><span></span>
-  </label>
-  <a class="tel-btn" href="tel:+221782504301">78 250 43 01</a>
-  </div>
-</header>
+  <!-- Floating Sticky Header -->
+  <header class="floating-header">
+    <div class="header-pill">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">
+          <img src="images/logo.jpeg" alt="Logo La Main de l'Agriculture">
+        </div>
+        <span class="brand-name">La Main de l’Agriculture</span>
+      </a>
+      
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="galerie.html" aria-current="page">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </label>
 
-<section class="page-hero page-hero-photo" style="background-image:url('images/piments.jpeg');">
-<p class="eyebrow">Sur le terrain</p>
-  <h1>Galerie</h1>
-  <p>Piments, concombres, gombo : un aperçu des cultures et des visites techniques de La Main de l’Agriculture à Vélingara et environs.</p>
-</section>
+      <div class="header-actions">
+        <a class="tel-btn" href="tel:+221782504301">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          78 250 43 01
+        </a>
+      </div>
+    </div>
+  </header>
 
-<section class="section">
-  <div class="filter-bar">
+  <!-- Page Hero -->
+  <section class="page-hero reveal">
+    <span class="section-label">Reportage Photographique</span>
+    <h1>Le terrain, en images authentiques</h1>
+    <p>Champs de Vélingara, parcelles en végétation et récoltes maraîchères : découvrez la réalité du terrain. Cliquez sur une photo pour l'agrandir.</p>
+  </section>
+
+  <!-- Galerie Filtres par Catégorie + Bouton Ajout Récolte -->
+  <div class="gallery-filters reveal" style="align-items: center;">
     <button class="filter-btn active" data-filter="all">Toutes les photos</button>
-    <button class="filter-btn" data-filter="cultures">Cultures & Récoltes</button>
-    <button class="filter-btn" data-filter="champs">Champs & Exploitation</button>
-    <button class="filter-btn" data-filter="equipe">Accompagnement Terrain</button>
+    <button class="filter-btn" data-filter="champs">Les Champs</button>
+    <button class="filter-btn" data-filter="recoltes">Nos Récoltes</button>
+    <button class="filter-btn" data-filter="equipe">L'Équipe & Suivi</button>
+    
+    <!-- Bouton interactif d'ajout de nouvelle récolte -->
+    <a href="#" id="add-harvest-trigger" class="filter-btn" style="background: var(--terracotta); color: white; border-color: var(--terracotta);">
+      🌾 + Ajouter une récolte
+    </a>
   </div>
 
-  <div class="gallery-grid">
-    <!-- Photos initiales -->
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/piments.jpeg');" data-caption="Récolte de piments d'excellence — La Main de l’Agriculture">
-      <div class="tile-label">Récolte de Piments</div>
-    </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/concombres.jpeg');" data-caption="Récolte de concombres frais — Vélingara">
-      <div class="tile-label">Récolte de Concombres</div>
-    </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/gombo-feuilles.jpeg');" data-caption="Plant de gombo en parfaite santé">
-      <div class="tile-label">Culture de Gombo</div>
-    </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/champ-1.jpeg');" data-caption="Champ de gombo et pépinière maraîchère">
-      <div class="tile-label">Champ de Gombo</div>
-    </div>
-    <div class="gallery-card" data-category="equipe" style="background-image:url('images/portrait-salif.jpeg');" data-caption="Salif lors d'une visite technique sur le terrain">
-      <div class="tile-label">Suivi Technique par Salif</div>
-    </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/champ-2.jpeg');" data-caption="Rangs de gombo en pleine croissance à Vélingara">
-      <div class="tile-label">Exploitation Maraîchère</div>
+  <!-- Grille Galerie (42 Photos du Terrain) -->
+  <div class="gallery-grid reveal-stagger reveal">
+    <!-- Photos d'origine -->
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/champ-1.jpeg" alt="Champ de gombo à Vélingara" loading="lazy">
+      <div class="gallery-caption">Champ de gombo entretenu</div>
     </div>
 
-    <!-- Nouvelles 31 photos de terrain -->
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-1.jpeg');" data-caption="Production maraîchère de piments frais — La Main de l'Agriculture">
-      <div class="tile-label">Production Piment</div>
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/piments.jpeg" alt="Récolte de piments multicolores" loading="lazy">
+      <div class="gallery-caption">Récolte de piments</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-2.jpeg');" data-caption="Visite de parcelle maraîchère à Vélingara">
-      <div class="tile-label">Suivi de Parcelle</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/concombres.jpeg" alt="Concombres frais harvested" loading="lazy">
+      <div class="gallery-caption">Récolte de concombres</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-3.jpeg');" data-caption="Récolte fraîchement cueillie sur le terrain">
-      <div class="tile-label">Récolte Fraîche</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/tomates.jpeg" alt="Tomates mûres fraîches" loading="lazy">
+      <div class="gallery-caption">Récolte de tomates</div>
     </div>
-    <div class="gallery-card" data-category="equipe" style="background-image:url('images/recolte-terrain-4.jpeg');" data-caption="Accompagnement technique et diagnostic en champ">
-      <div class="tile-label">Diagnostic Sol & Plants</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/poivrons.jpeg" alt="Poivrons verts de qualité" loading="lazy">
+      <div class="gallery-caption">Récolte de poivrons</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-5.jpeg');" data-caption="Rangées de cultures irriguées">
-      <div class="tile-label">Irrigation Maraîchère</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/aubergines.jpeg" alt="Aubergines maraîchères" loading="lazy">
+      <div class="gallery-caption">Récolte d'aubergines</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-6.jpeg');" data-caption="Qualité des légumes récoltés">
-      <div class="tile-label">Qualité Maraîchère</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/diakhatou.jpeg" alt="Diakhatou frais harvested" loading="lazy">
+      <div class="gallery-caption">Récolte de diakhatou</div>
     </div>
-    <div class="gallery-card" data-category="equipe" style="background-image:url('images/recolte-terrain-7.jpeg');" data-caption="Intervention technique du spécialiste terrain">
-      <div class="tile-label">Conseil Technique</div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/gombo-feuilles.jpeg" alt="Plants de gombo vigoureux" loading="lazy">
+      <div class="gallery-caption">Plant de gombo en croissance</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-8.jpeg');" data-caption="Pépinière et germination des plants">
-      <div class="tile-label">Pépinière & Semis</div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/champ-2.jpeg" alt="Rangs de maraîchage réguliers" loading="lazy">
+      <div class="gallery-caption">Rangs en croissance</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-9.jpeg');" data-caption="Récolte de gombos vigoureux">
-      <div class="tile-label">Gombo de Saison</div>
+
+    <div class="gallery-item reveal-child" data-category="equipe">
+      <img src="images/portrait-salif.jpeg" alt="Salif travaillant dans le champ" loading="lazy">
+      <div class="gallery-caption">Salif sur le terrain</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-10.jpeg');" data-caption="Légumes prêts pour l'acheminement et la vente">
-      <div class="tile-label">Vente & Distribution</div>
+
+    <div class="gallery-item reveal-child" data-category="equipe">
+      <img src="images/saliou-reunion.jpeg" alt="Rencontre technique agricole" loading="lazy">
+      <div class="gallery-caption">Rencontre & échange technique</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-11.jpeg');" data-caption="Vue d'ensemble de l'exploitation agricole">
-      <div class="tile-label">Vue d'Exploitation</div>
+
+    <!-- 31 Nouvelles Photos du Terrain -->
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-01.jpeg" alt="Vue générale de la parcelle maraîchère" loading="lazy">
+      <div class="gallery-caption">Vue globale de la parcelle</div>
     </div>
-    <div class="gallery-card" data-category="equipe" style="background-image:url('images/recolte-terrain-12.jpeg');" data-caption="Visite de contrôle sanitaire des cultures">
-      <div class="tile-label">Suivi Phytosanitaire</div>
+
+    <div class="gallery-item reveal-child" data-category="equipe">
+      <img src="images/terrain-02.jpeg" alt="Suivi technique et inspection du sol" loading="lazy">
+      <div class="gallery-caption">Suivi & inspection agronomique</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-13.jpeg');" data-caption="Belle récolte de piments colorés">
-      <div class="tile-label">Piments Mûrs</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-03.jpeg" alt="Légumes maraîchers récoltés à maturité" loading="lazy">
+      <div class="gallery-caption">Récolte du matin à Vélingara</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-14.jpeg');" data-caption="Préparation des sol et aménagement des planches">
-      <div class="tile-label">Préparation du Sol</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-04.jpeg" alt="Triage et mise en paniers des légumes" loading="lazy">
+      <div class="gallery-caption">Préparation des sacs pour la vente</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-15.jpeg');" data-caption="Panier de récolte du jour">
-      <div class="tile-label">Panier du Jour</div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-05.jpeg" alt="Parcelle maraîchère en pleine croissance" loading="lazy">
+      <div class="gallery-caption">Champ en pleine vigueur</div>
     </div>
-    <div class="gallery-card" data-category="equipe" style="background-image:url('images/recolte-terrain-16.jpeg');" data-caption="Recommandations personnalisées pour le producteur">
-      <div class="tile-label">Recommandations Terrain</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-06.jpeg" alt="Paniers de gombo frais de qualité" loading="lazy">
+      <div class="gallery-caption">Paniers de gombo de premier choix</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-17.jpeg');" data-caption="Champ sous arrosage et suivi météo local">
-      <div class="tile-label">Suivi Météo & Eau</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-07.jpeg" alt="Récolte de piments rouges et verts" loading="lazy">
+      <div class="gallery-caption">Piments mûrs et bien frais</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-18.jpeg');" data-caption="Variétés sélectionnées pour leur rendement">
-      <div class="tile-label">Haute Rendement</div>
+
+    <div class="gallery-item reveal-child" data-category="equipe">
+      <img src="images/terrain-08.jpeg" alt="Visite de terrain et échange avec le producteur" loading="lazy">
+      <div class="gallery-caption">Visite d'accompagnement terrain</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-19.jpeg');" data-caption="Concombres croquants et sains">
-      <div class="tile-label">Concombres Croquants</div>
+
+    <div class="gallery-item reveal-child" data-category="equipe">
+      <img src="images/terrain-09.jpeg" alt="Conseils d'irrigation et de fertilisation" loading="lazy">
+      <div class="gallery-caption">Conseils pratiques sur la parcelle</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-20.jpeg');" data-caption="Entretien des allées et des paillages">
-      <div class="tile-label">Entretien des Planches</div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-10.jpeg" alt="Canaux d'irrigation et rangs maraîchers" loading="lazy">
+      <div class="gallery-caption">Rangs sous système d'irrigation</div>
     </div>
-    <div class="gallery-card" data-category="equipe" style="background-image:url('images/recolte-terrain-21.jpeg');" data-caption="Salif en évaluation directe au champ">
-      <div class="tile-label">Évaluation Terrain</div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-11.jpeg" alt="Culture maraîchère bien entretenue" loading="lazy">
+      <div class="gallery-caption">Parcelle désherbée et fertilisée</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-22.jpeg');" data-caption="Récolte abondante de gombos">
-      <div class="tile-label">Récolte Abondante</div>
+
+    <div class="gallery-item reveal-child" data-category="equipe">
+      <img src="images/terrain-12.jpeg" alt="Contrôle phytosanitaire des cultures" loading="lazy">
+      <div class="gallery-caption">Diagnostic de santé des plantes</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-23.jpeg');" data-caption="Pépinière de jeunes poussées de maraîchage">
-      <div class="tile-label">Jeunes Poussées</div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-13.jpeg" alt="Développement des jeunes plants maraîchers" loading="lazy">
+      <div class="gallery-caption">Croissance optimale des plants</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-24.jpeg');" data-caption="Tri et sélection des meilleurs fruits">
-      <div class="tile-label">Sélection Qualité</div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-14.jpeg" alt="Rangs réguliers de légumes maraîchers" loading="lazy">
+      <div class="gallery-caption">Alignement rigoureux des rangs</div>
     </div>
-    <div class="gallery-card" data-category="equipe" style="background-image:url('images/recolte-terrain-25.jpeg');" data-caption="Suivi continu au fil des semaines de pousse">
-      <div class="tile-label">Suivi Continu</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-15.jpeg" alt="Sélection de légumes sains et frais" loading="lazy">
+      <div class="gallery-caption">Légumes fraîchement cueillis</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-26.jpeg');" data-caption="Système de goutte-à-goutte et d'arrosage">
-      <div class="tile-label">Système d'Arrosage</div>
+
+    <div class="gallery-item reveal-child" data-category="equipe">
+      <img src="images/terrain-16.jpeg" alt="Équipe sur le terrain à Vélingara" loading="lazy">
+      <div class="gallery-caption">L'équipe en pleine activité</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-27.jpeg');" data-caption="Culture saine sans résidus toxiques">
-      <div class="tile-label">Agriculture Durable</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-17.jpeg" alt="Récolte maraîchère abondante" loading="lazy">
+      <div class="gallery-caption">Grosse récolte maraîchère</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-28.jpeg');" data-caption="Piments de qualité supérieure">
-      <div class="tile-label">Qualité Supérieure</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-18.jpeg" alt="Conditionnement des récoltes pour livraison" loading="lazy">
+      <div class="gallery-caption">Récolte prête pour distribution</div>
     </div>
-    <div class="gallery-card" data-category="champs" style="background-image:url('images/recolte-terrain-29.jpeg');" data-caption="Développement vigoureux des plants">
-      <div class="tile-label">Vigueur des Plants</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-19.jpeg" alt="Piments d'exception cultivés à Vélingara" loading="lazy">
+      <div class="gallery-caption">Piments rouges de haute valeur</div>
     </div>
-    <div class="gallery-card" data-category="equipe" style="background-image:url('images/recolte-terrain-30.jpeg');" data-caption="Partage d'expérience avec les producteurs locaux">
-      <div class="tile-label">Partage & Formation</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-20.jpeg" alt="Gombos verts fermes et tendres" loading="lazy">
+      <div class="gallery-caption">Gombo vert extra-frais</div>
     </div>
-    <div class="gallery-card" data-category="cultures" style="background-image:url('images/recolte-terrain-31.jpeg');" data-caption="Coup d'œil sur la récolte du jour">
-      <div class="tile-label">Récolte Maraîchère</div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-21.jpeg" alt="Production maraîchère locale d'excellence" loading="lazy">
+      <div class="gallery-caption">Produits du terroir de Kolda</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-22.jpeg" alt="Concombres croquants et sains" loading="lazy">
+      <div class="gallery-caption">Récolte de concombres fermes</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-23.jpeg" alt="Tomates et aubergines du champ" loading="lazy">
+      <div class="gallery-caption">Tomates & aubergines cueillies</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-24.jpeg" alt="Maraîchage durable et rentable" loading="lazy">
+      <div class="gallery-caption">Cultures saines sans surplus</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-25.jpeg" alt="Qualité irréprochable des récoltes" loading="lazy">
+      <div class="gallery-caption">Qualité maraîchère garantie</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-26.jpeg" alt="Optimisation de l'arrosage et des planches" loading="lazy">
+      <div class="gallery-caption">Gestion efficace de l'eau</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-27.jpeg" alt="Parcelles nettoyées et prêtes pour semis" loading="lazy">
+      <div class="gallery-caption">Préparation méticuleuse des sols</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-28.jpeg" alt="Culture en phase de fructification" loading="lazy">
+      <div class="gallery-caption">Parcelle en pleine fructification</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-29.jpeg" alt="Stockage temporaire à l'ombre des récoltes" loading="lazy">
+      <div class="gallery-caption">Conservation sous abri frais</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="recoltes">
+      <img src="images/terrain-30.jpeg" alt="Légumes maraîchers de première fraîcheur" loading="lazy">
+      <div class="gallery-caption">Fraîcheur champ vers marché</div>
+    </div>
+
+    <div class="gallery-item reveal-child" data-category="champs">
+      <img src="images/terrain-31.jpeg" alt="Vue d'ensemble des parcelles maraîchères" loading="lazy">
+      <div class="gallery-caption">Exploitation agricole à Vélingara</div>
     </div>
   </div>
-</section>
 
-<footer>
-  <div class="footer-grid">
-    <h2>Ensemble, améliorons vos récoltes et vos revenus.</h2>
-    <div class="footer-contact-block">
-      <div class="contact-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <a href="tel:+221782504301">78 250 43 01</a>
+  <!-- Modal Statique d'ajout de récolte -->
+  <div id="harvest-modal" class="lightbox-modal" role="dialog" aria-modal="true">
+    <div class="contact-card" style="max-width:520px; width:95%; max-height:90vh; overflow-y:auto; position:relative; background:var(--cream-paper);">
+      <button class="lightbox-close" id="close-harvest-modal" style="top:10px; right:10px; color:var(--ink-primary);">&times;</button>
+      <h3 style="margin-top:0;">🌾 Ajouter une nouvelle récolte</h3>
+      <p style="font-size:0.9rem;">Choisissez une photo dans votre téléphone ou votre ordinateur.</p>
+      <form id="new-harvest-form">
+        <div class="form-group">
+          <label for="h-title">Nom du produit / Récolte</label>
+          <input type="text" id="h-title" class="form-control" placeholder="Ex: Récolte de Piments Rouges Frais" required>
+        </div>
+
+        <div class="form-group">
+          <label for="h-category">Catégorie</label>
+          <select id="h-category" class="form-control">
+            <option value="recoltes">Nos Récoltes</option>
+            <option value="champs">Les Champs</option>
+            <option value="equipe">L'Équipe & Suivi</option>
+          </select>
+        </div>
+
+        <div class="form-group" style="background:#fff; padding:1.2rem; border:2px dashed var(--terracotta); border-radius:14px; text-align:center;">
+          <label for="h-file-input" style="font-weight:bold; color:var(--terracotta); display:block; margin-bottom:0.5rem; font-size:1.05rem;">📸 Choisir une photo dans votre Galerie</label>
+          <input type="file" id="h-file-input" class="form-control" accept="image/*" style="cursor:pointer; font-size:0.95rem;">
+          <div id="h-img-preview-container" style="margin-top:0.8rem; display:none; text-align:center;">
+            <img id="h-img-preview" src="" alt="Aperçu" style="max-height:160px; margin:0 auto; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.15);">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top:1rem;">
+          <label for="h-preset-select">Ou choisir une photo du terrain</label>
+          <select id="h-preset-select" class="form-control">
+            <option value="">-- Utiliser une image d'exemple --</option>
+            <option value="images/piments.jpeg">Récolte de Piments</option>
+            <option value="images/concombres.jpeg">Récolte de Concombres</option>
+            <option value="images/tomates.jpeg">Récolte de Tomates</option>
+            <option value="images/poivrons.jpeg">Récolte de Poivrons</option>
+            <option value="images/aubergines.jpeg">Récolte d'Aubergines</option>
+            <option value="images/diakhatou.jpeg">Récolte de Diakhatou</option>
+            <option value="images/champ-1.jpeg">Champ de Gombo</option>
+            <option value="images/champ-2.jpeg">Rangs de Culture</option>
+            <option value="images/terrain-01.jpeg">Parcelle Maraîchère #1</option>
+            <option value="images/terrain-03.jpeg">Récolte de Légumes #1</option>
+            <option value="images/terrain-06.jpeg">Paniers de Gombo</option>
+            <option value="images/terrain-07.jpeg">Piments Mûrs</option>
+            <option value="images/terrain-10.jpeg">Rangs sous Irrigation</option>
+            <option value="images/terrain-11.jpeg">Culture Florissante</option>
+            <option value="images/terrain-15.jpeg">Légumes Sélectionnés</option>
+            <option value="images/terrain-17.jpeg">Récolte Abondante</option>
+            <option value="images/terrain-19.jpeg">Piments Féroces</option>
+            <option value="images/terrain-20.jpeg">Gombo Vert Sélectionné</option>
+            <option value="images/terrain-22.jpeg">Concombres et Poivrons</option>
+            <option value="images/terrain-23.jpeg">Tomates et Aubergines</option>
+            <option value="images/terrain-28.jpeg">Parcelle en Maturité</option>
+            <option value="images/terrain-31.jpeg">Vue Exploitation</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="h-desc">Description / Prix / Quantité</label>
+          <textarea id="h-desc" class="form-control" placeholder="Ex: 50 sacs disponibles à Vélingara cette semaine !"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;">Publier sur le site</button>
+        <button type="button" id="broadcast-wa-btn" class="btn btn-whatsapp" style="width:100%; margin-top:0.6rem;">📢 Partager sur WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/221782504301" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h2>La Main de l’Agriculture</h2>
+        <p style="margin-top: 0.5rem; color: rgba(253,251,247,0.7);">Production maraîchère & conseils agronomiques à Vélingara.</p>
       </div>
-      <div class="contact-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <a href="tel:+221771212309">77 12 12 309</a>
+      
+      <div class="footer-contact-block">
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+221782504301">78 250 43 01</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+221771212309">77 12 12 309</a>
+        </div>
+        <p class="footer-loc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Vélingara et environs
+        </p>
       </div>
-      <p class="footer-loc">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Vélingara et environs
-      </p>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <span>La Main de l’Agriculture</span>
-    <span>Vélingara, Sénégal</span>
-  </div>
-</footer>
 
-<!-- Lightbox Modal -->
-<div id="lightbox-modal" class="lightbox-modal">
-  <span id="lightbox-close" class="lightbox-close">&times;</span>
-  <img id="lightbox-img" class="lightbox-content" src="" alt="Vue agrandie">
-  <div id="lightbox-caption" class="lightbox-caption"></div>
-</div>
+    <div class="footer-bottom">
+      <span>© La Main de l’Agriculture — Tous droits réservés.</span>
+      <span>Vélingara, Sénégal</span>
+    </div>
+  </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/221782504301" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Discuter sur WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-</a>
-
-<script src="main.js"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>

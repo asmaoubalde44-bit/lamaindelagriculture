@@ -1,217 +1,336 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Main de l’Agriculture — Visite Technique Agricole | Vélingara</title>
-<meta name="description" content="La Main de l’Agriculture : production de légumes et accompagnement technique agricole à Vélingara et environs.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Main de l’Agriculture — Visite Technique Agricole & Production Maraîchère | Vélingara</title>
+  <meta name="description"
+    content="La Main de l’Agriculture : production maraîchère d'excellence et accompagnement technique agricole sur le terrain à Vélingara et environs. Piments, concombres, gombo, tomates, aubergines.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="big">
 
-<header class="floating-header">
-  <div class="header-pill">
-    <a class="brand" href="index.html">
-      <div class="brand-mark"><img src="images/logo.jpeg" alt="Logo La Main de l'Agriculture"></div>
-      <span class="brand-name">La Main de l’Agriculture</span>
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" aria-current="page">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
-        <li><a href="galerie.html">Galerie</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
-      <span></span><span></span><span></span>
-    </label>
-    <a class="tel-btn" href="tel:+221782504301">78 250 43 01</a>
-  </div>
-</header>
+<body>
 
-<section class="hero-full" style="background-image:url('images/champ-1.jpeg');">
-  <div class="hero-full-inner">
-    <p class="eyebrow" style="color:var(--gold);">Pour une agriculture productive et durable</p>
-    <h1>La Main de l’Agriculture, <span class="accent">le légume cultivé avec sérieux</span></h1>
-    <p class="lede">Production de légumes et accompagnement technique à Vélingara et environs : piments, concombres, gombo, et un vrai suivi de terrain pour les producteurs.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-primary" href="contact.html">Nous contacter</a>
-      <a class="btn btn-ghost" style="border-color:#fff; color:#fff;" href="galerie.html">Voir la galerie</a>
+  <!-- Floating Sticky Header -->
+  <header class="floating-header">
+    <div class="header-pill">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">
+          <img src="images/logo.jpeg" alt="Logo La Main de l'Agriculture">
+        </div>
+        <span class="brand-name">La Main de l’Agriculture</span>
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Ouvrir le menu de navigation">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="header-actions">
+        <a class="tel-btn" href="tel:+221782504301">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+          78 250 43 01
+        </a>
+      </div>
     </div>
-  </div>
+  </header>
+
+  <!-- Hero Full Section -->
+  <section class="hero-full" style="background-image: url('images/champ-1.jpeg');">
+    <div class="hero-full-inner">
+      <span class="eyebrow">Agriculture Productive & Sustainable</span>
+      <h1>La Main de l’Agriculture, <span class="accent">le légume cultivé avec rigueur</span></h1>
+      <p class="lede">Production maraîchère de haute qualité et accompagnement technique de proximité à Vélingara et
+        environs. Des piments, concombres, gombos, tomates, poivrons, aubergines et diakhatou avec un suivi personnalisé
+        sur le terrain.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="contact.html">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+          Demander une visite
+        </a>
+        <a class="btn btn-ghost" href="galerie.html">
+          Voir la galerie photo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Stat Strip -->
   <div class="hero-stat-strip">
     <div class="hero-stat-card">
-      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0c0-5-5-9-5-9z"/><path d="M12 22v-9"/></svg></div>
-      <div><strong>3 cultures</strong><span>Piments, concombres, gombo</span></div>
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 2C12 2 7 6 7 11a5 5 0 0010 0c0-5-5-9-5-9z" />
+          <path d="M12 22v-9" />
+        </svg>
+      </div>
+      <div>
+        <strong>7 Cultures Majeures</strong>
+        <span>Légumes maraîchers d'exception</span>
+      </div>
     </div>
     <div class="hero-stat-card">
-      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <div><strong>Vélingara</strong><span>Et environs</span></div>
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+      </div>
+      <div>
+        <strong>Vélingara & Environs</strong>
+        <span>Présence locale active dans la région</span>
+      </div>
     </div>
     <div class="hero-stat-card">
-      <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3L22 4M2 12a10 10 0 1020 0 10 10 0 00-20 0z"/></svg></div>
-      <div><strong>2 formules</strong><span>Visite simple ou suivi mensuel</span></div>
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M9 11l3 3L22 4M2 12a10 10 0 1020 0 10 10 0 00-20 0z" />
+        </svg>
+      </div>
+      <div>
+        <strong>Formules d'Accompagnement</strong>
+        <span>Visite ponctuelle ou suivi mensuel</span>
+      </div>
     </div>
   </div>
-</section>
 
-<div class="feature-strip">
-  <div class="feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Diagnostic sur le terrain</div>
-  <div class="feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Suivi WhatsApp</div>
-  <div class="feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Conseils personnalisés</div>
-  <div class="feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Connaissance locale</div>
-</div>
-
-<section class="split-section">
-  <div class="split-media" style="background-image:url('images/piments.jpeg');"></div>
-  <div class="split-text">
-    <p class="section-label">Nos cultures</p>
-    <h2>Des légumes suivis de la plantation à la récolte</h2>
-    <p>À La Main de l’Agriculture, chaque culture est suivie de près : piments, concombres et gombo poussent en rangs entretenus, avec un vrai travail de terrain à chaque étape.</p>
-    <ul>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Piments</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Concombres</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Gombo</li>
-    </ul>
-    <a class="btn btn-primary" href="galerie.html">Voir les photos</a>
+  <!-- Feature Strip -->
+  <div class="feature-strip reveal">
+    <div class="feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="20 6 9 17 4 12" />
+      </svg> Diagnostic sur le terrain</div>
+    <div class="feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="20 6 9 17 4 12" />
+      </svg> Suivi WhatsApp continu</div>
+    <div class="feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="20 6 9 17 4 12" />
+      </svg> Advice & Conseils sur mesure</div>
+    <div class="feature-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <polyline points="20 6 9 17 4 12" />
+      </svg> Connaissance fine des sols de Kolda</div>
   </div>
-</section>
 
-<section class="split-section reverse">
-  <div class="split-media" style="background-image:url('images/champ-2.jpeg');"></div>
-  <div class="split-text">
-    <p class="section-label">Notre accompagnement</p>
-    <h2>Un vrai suivi de terrain, pas des conseils génériques</h2>
-    <p>Visite des champs, diagnostic, conseils techniques adaptés à chaque exploitation : maraîchage, fertilisation, irrigation, traitements phytosanitaires et planification des cultures selon les saisons.</p>
-    <a class="btn btn-primary" href="services.html">Voir les services</a>
-  </div>
-</section>
-
-<section class="section" style="padding-bottom:1rem;">
-  <p class="section-label" style="text-align:center;">En images</p>
-  <h2 style="text-align:center;">Sur le terrain à Vélingara</h2>
-  <div class="photo-mosaic">
-    <div class="mosaic-tile large" style="background-image:url('images/champ-1.jpeg');">
-      <div class="tile-label">Champ de gombo</div>
-    </div>
-    <div class="mosaic-tile" style="background-image:url('images/piments.jpeg');">
-      <div class="tile-label">Récolte de piments</div>
-    </div>
-    <div class="mosaic-tile" style="background-image:url('images/concombres.jpeg');">
-      <div class="tile-label">Récolte de concombres</div>
-    </div>
-    <div class="mosaic-tile" style="background-image:url('images/gombo-feuilles.jpeg');">
-      <div class="tile-label">Plants de gombo</div>
-    </div>
-    <div class="mosaic-tile" style="background-image:url('images/champ-2.jpeg');">
-      <div class="tile-label">Rangs en croissance</div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:2rem;">
-  <p class="section-label">Nos offres</p>
-  <h2>Deux formules d'accompagnement</h2>
-  <div class="offers">
-    <div class="offer-card simple">
-      <span class="offer-tag">Ponctuelle</span>
-      <h3>Visite technique simple</h3>
+  <!-- Split Section 1: Nos Cultures -->
+  <section class="split-section reveal">
+    <div class="split-media" style="background-image: url('images/piments.jpeg');"></div>
+    <div class="split-text">
+      <span class="section-label">Nos cultures maraîchères</span>
+      <h2>Des légumes entretenus avec soin, de la graine à la récolte</h2>
+      <p>À La Main de l’Agriculture, chaque variété est conduite selon des normes de rigueur exigeantes. Nos rangs sont
+        désherbés, fertilisés et irrigués pour garantir des produits sains et des rendements optimaux.</p>
       <ul>
-        <li>Diagnostic du champ</li>
-        <li>Conseils pratiques</li>
-        <li>Durée : 1h à 2h</li>
-        <li>Tarif selon distance</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="20 6 9 17 4 12" />
+          </svg> Piments féroces & doux</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="20 6 9 17 4 12" />
+          </svg> Concombres croquants</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="20 6 9 17 4 12" />
+          </svg> Gombo frais & tendre</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="20 6 9 17 4 12" />
+          </svg> Tomates charnues</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="20 6 9 17 4 12" />
+          </svg> Poivrons verts & rouges</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="20 6 9 17 4 12" />
+          </svg> Aubergines brillantes</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="20 6 9 17 4 12" />
+          </svg> Diakhatou savoureux</li>
       </ul>
+      <a class="btn btn-primary" href="galerie.html">Découvrir les récoltes</a>
     </div>
-    <div class="offer-card suivi">
-      <span class="offer-tag">Accompagnement continu</span>
-      <h3>Suivi technique mensuel</h3>
-      <ul>
-        <li>1 à 4 visites par mois</li>
-        <li>Appui WhatsApp / appel</li>
-        <li>Programme de traitement et fertilisation</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" style="background:#fdfbf7;">
-  <div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
-    <div>
-      <p class="section-label">Simulateur gratuit</p>
-      <h2>Estimez votre besoin de suivi technique</h2>
-      <p style="margin:1rem 0; color:#444;">Sélectionnez la surface de votre exploitation et la formule souhaitée pour obtenir une estimation immédiate de votre accompagnement personnalisé sur le terrain à Vélingara.</p>
-      <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-weight:600; font-size:0.95rem;">
-        <li style="display:flex; align-items:center; gap:0.5rem; color:var(--green);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Diagnostic complet du sol et des plants</li>
-        <li style="display:flex; align-items:center; gap:0.5rem; color:var(--green);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Plan d'irrigation et de fertilisation</li>
-        <li style="display:flex; align-items:center; gap:0.5rem; color:var(--green);"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Conseils adaptés au climat de Vélingara</li>
-      </ul>
+  <!-- Split Section 2: Accompagnement -->
+  <section class="split-section reverse reveal">
+    <div class="split-media" style="background-image: url('images/champ-2.jpeg');"></div>
+    <div class="split-text">
+      <span class="section-label">Accompagnement Technique</span>
+      <h2>Un suivi pragmatique et direct sur votre champ</h2>
+      <p>Pas de théories abstraites : nous nous déplaçons directement dans votre exploitation à Vélingara et dans ses
+        environs pour poser un diagnostic exact (maladies, parasites, irrigation, fertilisation) et adapter le programme
+        de travail.</p>
+      <a class="btn btn-outline" href="services.html">Consulter nos prestations</a>
     </div>
-    <div class="calc-card">
-      <div class="calc-group">
-        <label for="calc-surface">Surface estimée (en Hectares / Champs)</label>
-        <input type="number" id="calc-surface" class="calc-input" value="1" min="0.5" step="0.5">
+  </section>
+
+  <!-- Section Galerie Mosaic -->
+  <section class="section">
+    <div style="text-align: center;">
+      <span class="section-label" style="text-align: center;">Carnet du terrain</span>
+      <h2 style="text-align: center;">Sur nos exploitations à Vélingara</h2>
+      <p style="max-width: 600px; margin: 0 auto 2rem;">Cliquez sur n'importe quelle image pour l'admirer en plein
+        écran.</p>
+    </div>
+
+    <div class="photo-mosaic reveal-stagger reveal">
+      <div class="mosaic-tile large reveal-child" style="background-image: url('images/champ-1.jpeg');">
+        <div class="tile-label">Champ de gombo en culture</div>
       </div>
-      <div class="calc-group">
-        <label for="calc-formule">Formule d'accompagnement</label>
-        <select id="calc-formule" class="calc-select">
-          <option value="ponctuelle">Visite Ponctuelle (Diagnostic ponctuel)</option>
-          <option value="mensuel">Suivi Mensuel Régulier (Recommandé)</option>
-        </select>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/piments.jpeg');">
+        <div class="tile-label">Récolte de piments</div>
       </div>
-      <div id="calc-result"></div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/concombres.jpeg');">
+        <div class="tile-label">Récolte de concombres</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/terrain-06.jpeg');">
+        <div class="tile-label">Paniers de gombo frais</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/gombo-feuilles.jpeg');">
+        <div class="tile-label">Plants de gombo vigoureux</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/champ-2.jpeg');">
+        <div class="tile-label">Rangs en croissance</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/tomates.jpeg');">
+        <div class="tile-label">Tomates bien mûres</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/terrain-17.jpeg');">
+        <div class="tile-label">Récolte maraîchère abondante</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/poivrons.jpeg');">
+        <div class="tile-label">Poivrons de qualité</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/aubergines.jpeg');">
+        <div class="tile-label">Aubergines récoltées</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/terrain-11.jpeg');">
+        <div class="tile-label">Culture maraîchère florissante</div>
+      </div>
+      <div class="mosaic-tile reveal-child" style="background-image: url('images/diakhatou.jpeg');">
+        <div class="tile-label">Diakhatou frais</div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-photo-band" style="background-image:url('images/gombo-feuilles.jpeg');">
-  <div class="cta-photo-band-inner">
-    <h2>Ensemble, améliorons vos récoltes et vos revenus !</h2>
-    <a class="btn btn-primary" href="contact.html">Demander une visite</a>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-grid">
-    <h2>La Main de l’Agriculture</h2>
-    <div class="footer-contact-block">
-      <div class="contact-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <a href="tel:+221782504301">78 250 43 01</a>
-      </div>
-      <div class="contact-line">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <a href="tel:+221771212309">77 12 12 309</a>
-      </div>
-      <p class="footer-loc">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Vélingara et environs
-      </p>
+  <!-- Formules & Offres Section -->
+  <section class="section" style="padding-top: 2rem;">
+    <div style="text-align: center;">
+      <span class="section-label" style="text-align: center;">Nos formules d'appui</span>
+      <h2 style="text-align: center;">Deux approches sur mesure</h2>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <span>La Main de l’Agriculture</span>
-    <span>Vélingara, Sénégal</span>
-  </div>
-</footer>
 
-<!-- Lightbox Modal -->
-<div id="lightbox-modal" class="lightbox-modal">
-  <span id="lightbox-close" class="lightbox-close">&times;</span>
-  <img id="lightbox-img" class="lightbox-content" src="" alt="Vue agrandie">
-  <div id="lightbox-caption" class="lightbox-caption"></div>
-</div>
+    <div class="offers reveal-stagger reveal">
+      <div class="offer-card simple reveal-child">
+        <span class="offer-tag">Ponctuel</span>
+        <h3>Visite Technique Simple</h3>
+        <p>Un diagnostic rapide et un plan d'action d'urgence à appliquer directement.</p>
+        <ul>
+          <li>Diagnostic complet de l'état sanitaire des plants</li>
+          <li>Identification des attaques de ravageurs & carences</li>
+          <li>Recommandations de traitement immédiates</li>
+          <li>Durée de la visite : 1h à 2h de terrain</li>
+          <li>Tarification adaptée selon la distance</li>
+        </ul>
+        <div style="margin-top: 2rem;">
+          <a class="btn btn-outline" style="width: 100%;" href="contact.html">Réserver une visite</a>
+        </div>
+      </div>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/221782504301" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Discuter sur WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-</a>
+      <div class="offer-card suivi reveal-child">
+        <span class="offer-tag">Accompagnement continu</span>
+        <h3>Suivi Technique Mensuel</h3>
+        <p>Une sérénité totale pour toute votre saison maraîchère, de la pépinière à la vente.</p>
+        <ul>
+          <li>1 à 4 visites de terrain programmées par mois</li>
+          <li>Assistance WhatsApp & téléphonique continue</li>
+          <li>Calendrier personnalisé de fertilisation & traitement</li>
+          <li>Ajustement réactif selon les conditions météo</li>
+          <li>Conseils en gestion des récoltes & commercialisation</li>
+        </ul>
+        <div style="margin-top: 2rem;">
+          <a class="btn btn-primary" style="width: 100%;" href="contact.html">Démarrer un suivi mensuel</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script src="main.js"></script>
+  <!-- CTA Photo Band -->
+  <section class="cta-photo-band" style="background-image: url('images/gombo-feuilles.jpeg');">
+    <div class="cta-photo-band-inner">
+      <h2>Maximisez la rentabilité et la santé de vos cultures</h2>
+      <p>Bénéficiez des meilleures pratiques maraîchères adaptées au terroir de Vélingara.</p>
+      <a class="btn btn-primary" href="contact.html">Demander un diagnostic terrain</a>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/221782504301" class="floating-whatsapp" target="_blank" rel="noopener"
+    aria-label="Contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path
+        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" />
+    </svg>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h2>La Main de l’Agriculture</h2>
+        <p style="margin-top: 0.5rem; color: rgba(253,251,247,0.7);">Production maraîchère & conseils d'agronomie à
+          Vélingara.</p>
+      </div>
+
+      <div class="footer-contact-block">
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+          <a href="tel:+221782504301">78 250 43 01</a>
+        </div>
+        <div class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+          </svg>
+          <a href="tel:+221771212309">77 12 12 309</a>
+        </div>
+        <p class="footer-loc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Vélingara et environs, Région de Kolda
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© La Main de l’Agriculture — Tous droits réservés.</span>
+      <span>Vélingara, Sénégal</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
