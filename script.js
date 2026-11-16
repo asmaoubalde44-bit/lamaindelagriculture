@@ -369,7 +369,7 @@ try {
         waBtn.addEventListener('click', function () {
           var title = document.getElementById('h-title') ? document.getElementById('h-title').value : 'Nouvelle récolte';
           var desc = document.getElementById('h-desc') ? document.getElementById('h-desc').value : 'Disponible dès maintenant à Vélingara !';
-          var waText = '📢 *LA MAIN DE L’AGRICULTURE — NOUVELLE RÉCOLTE DISPONIBLE !*\n\n🌾 *Produit* : ' + title + '\n📝 *Info* : ' + desc + '\n📍 *Lieu* : Vélingara\n📞 *Contact* : 78 250 43 01 / 77 12 12 309';
+          var waText = '📢 *LA MAIN DE L’AGRICULTURE — NOUVELLE RÉCOLTE DISPONIBLE !*\n\n🌾 *Produit* : ' + title + '\n📝 *Info* : ' + desc + '\n📍 *Lieu* : Vélingara\n📞 *Contact* : 78 250 43 01 / 77 121 23 09';
 
           window.open('https://wa.me/?text=' + encodeURIComponent(waText), '_blank');
         });
